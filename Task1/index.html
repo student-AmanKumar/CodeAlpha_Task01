@@ -1,0 +1,3539 @@
+ <!DOCTYPE html>
+ <html lang="en">
+    
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+<script src="https://kit.fontawesome.com/bfc6a1edf2.js" crossorigin="anonymous"></script>
+ </head>
+ <body>
+
+ <section class="bkx-gallery" id="bkxGallery">
+
+    
+    <!-- =========================================================
+         ATMOSPHERE
+    ========================================================== -->
+
+    <div class="bkx-orb bkx-orb-one"></div>
+    <div class="bkx-orb bkx-orb-two"></div>
+    <div class="bkx-grid-lines"></div>
+    <div class="bkx-watermark">BHAMORI</div>
+
+
+    <!-- =========================================================
+         HEADER
+    ========================================================== -->
+
+    <header class="bkx-head">
+        <!-- TASK STATUS -->
+
+<div class="bkx-task-strip">
+
+    <!-- <span class="bkx-task-dot"></span> -->
+
+  <span class="bkx-task-brand" style="
+    display:inline-flex;
+    align-items:center;
+    gap:clamp(4px, .7vw, 6px);
+    white-space:nowrap;
+">
+  <img  
+    src="gallery imgs/codealphalogo.png"  
+    alt="CodeAlpha"
+    onclick="window.open('https://www.codealpha.tech/', '_blank')"
+    role="link"
+    tabindex="0"
+    aria-label="Open CodeAlpha website"
+    style="
+        width:clamp(120px, 12vw, 150px);
+        height:clamp(34px, 3.8vw, 44px);
+        object-fit:contain;
+        object-position:left center;
+        display:block;
+        flex:0 0 auto;
+        cursor:pointer;
+    "
+>
+    <span class="bkx-task-dot"></span>
+
+    <span style="
+font-size:clamp(8px, 1vw, 12px);
+        font-weight:800;
+        letter-spacing:clamp(1px, .18vw, 1.8px);
+        color:#8c692e;
+        line-height:1;
+    ">
+    
+    </span>
+</span>
+
+    <span class="bkx-task-divider">·</span>
+
+    <span class="bkx-task-name">
+        FRONTEND DEVELOPMENT INTERNSHIP 
+    </span> 
+
+    <span class="bkx-task-divider">·</span>
+
+    <strong>
+        TASK 01 — IMAGE GALLERY
+    </strong>
+
+    <span class="bkx-task-status">
+        <i></i>
+        PROJECT STATUS: COMPLETED
+    </span>
+
+</div>
+<style>
+/* =========================================================
+   CODEALPHA — COMPACT TASK STATUS STRIP
+========================================================= */
+
+.bkx-task-strip{
+    width:100%;
+
+    display:flex;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:8px;
+
+    margin:0 0 20px;
+    padding:0 0 10px;
+
+    border-bottom:1px solid rgba(47,60,51,.13);
+
+    font-family:"Poppins",sans-serif;
+    line-height:1;
+}
+
+/* GOLD DOT */
+
+.bkx-task-dot{
+    width:5px;
+    height:5px;
+    flex:0 0 5px;
+
+    border-radius:50%;
+    background:#b38a3e;
+
+    box-shadow:
+        0 0 0 3px rgba(179,138,62,.10);
+}
+
+/* BRAND */
+
+.bkx-task-brand{
+    font-size:7px;
+    font-weight:800;
+
+    letter-spacing:1.8px;
+    color:#8c692e;
+}
+
+/* DIVIDER */
+
+.bkx-task-divider{
+    font-size:9px;
+    color:rgba(47,60,51,.25);
+}
+
+/* INTERNSHIP */
+
+.bkx-task-name{
+    font-size:6.5px;
+    font-weight:600;
+
+    letter-spacing:1.2px;
+    color:rgba(47,60,51,.48);
+}
+
+/* TASK */
+
+.bkx-task-strip strong{
+    font-size:6.5px;
+    font-weight:700;
+
+    letter-spacing:1.25px;
+    color:#2f3c33;
+}
+
+/* =========================================================
+   CODE STATUS
+========================================================= */
+
+.bkx-task-status{
+    display:inline-flex;
+    align-items:center;
+    gap:5px;
+
+    margin-left:auto;
+
+    font-size:6px;
+    font-weight:700;
+
+    letter-spacing:1.15px;
+    white-space:nowrap;
+
+    color:#667267;
+}
+
+.bkx-task-status i{
+    width:5px;
+    height:5px;
+
+    border-radius:50%;
+
+    background:#5f8068;
+
+    box-shadow:
+        0 0 0 3px rgba(95,128,104,.10);
+
+    animation:bkxCodeStatusPulse 1.8s ease-in-out infinite;
+}
+
+@keyframes bkxCodeStatusPulse{
+    0%,100%{
+        opacity:.55;
+        transform:scale(.85);
+    }
+
+    50%{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media(max-width:800px){
+
+    .bkx-task-strip{
+        gap:7px;
+        margin-bottom:18px;
+        padding-bottom:9px;
+    }
+
+    .bkx-task-status{
+        margin-left:0;
+    }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:600px){
+
+    .bkx-task-strip{
+        gap:6px;
+
+        margin-bottom:16px;
+        padding-bottom:8px;
+    }
+
+    .bkx-task-dot{
+        width:4px;
+        height:4px;
+        flex-basis:4px;
+    }
+
+    .bkx-task-brand{
+        font-size:6px;
+        letter-spacing:1.45px;
+    }
+
+    .bkx-task-divider{
+        font-size:8px;
+    }
+
+    .bkx-task-name,
+    .bkx-task-strip strong{
+        font-size:5.5px;
+        letter-spacing:.9px;
+    }
+
+    .bkx-task-status{
+        width:100%;
+        margin-left:15px;
+
+        font-size:5.5px;
+        letter-spacing:1px;
+    }
+
+    .bkx-task-status i{
+        width:4px;
+        height:4px;
+    }
+}
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media(max-width:380px){
+
+    .bkx-task-strip{
+        gap:5px;
+        margin-bottom:14px;
+    }
+
+    .bkx-task-brand{
+        font-size:5.5px;
+    }
+
+    .bkx-task-name,
+    .bkx-task-strip strong{
+        font-size:5px;
+        letter-spacing:.75px;
+    }
+
+    .bkx-task-status{
+        margin-left:12px;
+        font-size:5px;
+    }
+} </style>
+
+        <div class="bkx-kicker">
+            <span class="bkx-kicker-line"></span>
+            <span>THE VILLAGE ARCHIVE</span>
+        </div>
+
+        <div class="bkx-title-row">
+
+            <div class="bkx-title-main">
+
+                <h2>
+                    Life,
+                    <span>Captured.</span>
+                </h2>
+
+                <p>
+                    A living visual archive of Bhamori Khurd —
+                    its Fields, People, Traditions, Togetherness
+                    and the little moments that quietly become memories.
+                </p>
+
+            </div>
+<div class="bkx-head-meta">
+
+    <div class="bkx-head-mark">
+
+       <div
+    class="bkx-head-logo"
+    onclick="window.open('https://www.linkedin.com/in/aman-kumar-462a21316/', '_blank')"
+    role="link"
+    tabindex="0"
+    aria-label="Open Aman Kumar LinkedIn profile"
+    style="cursor:pointer;"
+>
+    <img
+        src="gallery imgs/linkedin.png"
+        alt="Aman Kumar"
+    >
+</div>
+
+        <div class="bkx-head-est">
+                           <div class="bkx-live-label">
+
+                <span></span>
+
+<small>Intern <b style="color:#b38a3e;font-size:9px;font-weight:800;margin:0 2px;">@</b></small>
+<div class="bkx-internship-logos">
+
+   <img  
+    src="gallery imgs/codealphalogo.png"  
+    alt="CodeAlpha"
+    onclick="window.open('https://www.codealpha.tech/', '_blank')"
+    role="link"
+    tabindex="0"
+    aria-label="Open CodeAlpha website"
+    style="cursor:pointer;"
+>
+
+
+   <img  
+    src="gallery imgs/codesoftlogo.png"  
+    alt="CodeSoft"
+    onclick="window.open('https://www.codsoft.in/', '_blank')"
+    role="link"
+    tabindex="0"
+    aria-label="Open CodeSoft website"
+    style="cursor:pointer;"
+>
+
+</div>
+<style> 
+    .bkx-internship-logos{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:9px;
+    width:max-content;
+    max-width:100%;
+}
+
+.bkx-internship-logos img{
+    width:clamp(62px, 6.5vw, 82px);
+    height:auto;
+    max-width:100%;
+    display:block;
+    object-fit:contain;
+    object-position:center;
+    border:0;
+    outline:0;
+    box-shadow:none;
+    border-radius:0;
+    padding:0;
+    margin:0;
+}
+
+
+
+@media(max-width:600px){
+    .bkx-internship-logos{
+        gap:6px;
+    }
+
+    .bkx-internship-logos img{
+        width:clamp(52px, 15vw, 68px);
+    }
+
+    .bkx-logo-separator{
+        font-size:13px;
+    }
+}
+</style> 
+</div>
+        </div>
+
+    </div>
+
+
+
+</div>
+
+<style> 
+    /* =========================================================
+   HEADER META 
+========================================================= */
+
+.bkx-head-meta{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+    gap:12px;
+
+    flex:0 0 auto;
+    min-width:70px;
+}
+
+
+/* =========================================================
+   LOGO MARK
+========================================================= */
+
+.bkx-head-mark{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+    width:100%;
+}
+
+
+/* =========================================================
+   SINGLE CIRCULAR LOGO FRAME
+========================================================= */
+
+.bkx-head-logo{
+    width:clamp(48px, 5vw, 64px);
+    aspect-ratio:1 / 1;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    overflow:hidden;
+
+    border:1px solid rgba(179,138,62,.55);
+    border-radius:50%;
+
+    box-sizing:border-box;
+    flex-shrink:0;
+
+    position:relative;
+
+    /* PREMIUM SOFT ANIMATION */
+    animation:bkxLogoPulse 3.2s ease-in-out infinite;
+
+    transition:
+        transform .35s ease,
+        border-color .35s ease,
+        box-shadow .35s ease;
+}
+
+
+/* =========================================================
+   REMOVE ALL OLD INNER RINGS
+========================================================= */
+
+.bkx-head-logo::before,
+.bkx-head-logo::after{
+    content:none !important;
+    display:none !important;
+}
+
+
+/* =========================================================
+   LOGO IMAGE
+========================================================= */
+
+.bkx-head-logo img{
+    width:100%;
+    height:100%;
+
+    max-width:100%;
+    max-height:100%;
+
+    display:block;
+
+    padding:7px;
+
+    box-sizing:border-box;
+
+    object-fit:contain;
+    object-position:center;
+
+    border-radius:50%;
+
+    border:0;
+    outline:0;
+}
+
+
+/* =========================================================
+   LOGO CIRCLE — PREMIUM PULSE
+========================================================= */
+
+@keyframes bkxLogoPulse{
+
+    0%,
+    100%{
+        transform:scale(1);
+
+        border-color:rgba(179,138,62,.50);
+
+        box-shadow:
+            0 0 0 0 rgba(179,138,62,0);
+    }
+
+    50%{
+        transform:scale(1.035);
+
+        border-color:rgba(179,138,62,.82);
+
+        box-shadow:
+            0 0 14px rgba(179,138,62,.16);
+    }
+
+}
+
+
+/* =========================================================
+   LOGO HOVER
+========================================================= */
+
+.bkx-head-logo:hover{
+    transform:scale(1.06);
+
+    border-color:rgba(179,138,62,.90);
+
+    box-shadow:
+        0 0 18px rgba(179,138,62,.20);
+}
+
+
+/* =========================================================
+   EST. / YEAR
+========================================================= */
+
+.bkx-head-est{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    gap:5px;
+
+    margin-top:5px;
+}
+
+.bkx-head-est small{
+    font-family:"Poppins",sans-serif;
+
+    font-size:6px;
+    font-weight:700;
+
+    line-height:1;
+
+    letter-spacing:1.35px;
+
+    color:#8b7650;
+}
+
+
+/* =========================================================
+   CODEALPHA / STATUS AREA
+========================================================= */
+
+.bkx-live-label{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    gap:6px;
+
+    white-space:nowrap;
+
+    font-family:"Poppins",sans-serif;
+}
+
+
+/* =========================================================
+   STATUS DOT
+========================================================= */
+
+.bkx-live-label span{
+    width:5px;
+    height:5px;
+
+    flex:0 0 5px;
+
+    border-radius:50%;
+
+    background:#5f8068;
+
+    box-shadow:
+        0 0 0 3px rgba(95,128,104,.10);
+
+    animation:bkxArchivePulse 1.8s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   CODEALPHA TEXT
+   — KEPT FOR EXISTING HTML
+========================================================= */
+
+.bkx-live-label strong{
+    font-size:6px;
+    font-weight:700;
+
+    letter-spacing:1.25px;
+
+    color:rgba(47,60,51,.55);
+}
+
+
+/* =========================================================
+   LIVE DOT ANIMATION
+========================================================= */
+
+@keyframes bkxArchivePulse{
+
+    0%,
+    100%{
+        opacity:.55;
+        transform:scale(.85);
+    }
+
+    50%{
+        opacity:1;
+        transform:scale(1);
+    }
+
+}
+
+
+/* =========================================================
+   CODEALPHA LOGO
+   — IF STRONG IS REPLACED BY IMG
+========================================================= */
+
+.bkx-live-label img{
+    width:clamp(62px, 6.5vw, 82px);
+    height:auto;
+
+    max-width:100%;
+
+    display:block;
+
+    object-fit:contain;
+    object-position:center;
+
+    margin:0;
+    padding:0;
+
+    border:0;
+    outline:0;
+
+    box-shadow:none;
+    border-radius:0;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media(max-width:800px){
+
+    .bkx-head-meta{
+        min-width:62px;
+        gap:10px;
+    }
+
+    .bkx-head-logo{
+        width:54px;
+    }
+
+    .bkx-head-logo img{
+        padding:6px;
+    }
+
+    .bkx-head-est{
+        margin-top:4px;
+        gap:4px;
+    }
+
+    .bkx-head-est small{
+        font-size:5.5px;
+        letter-spacing:1.1px;
+    }
+
+    .bkx-live-label{
+        gap:5px;
+    }
+
+    .bkx-live-label span{
+        width:4px;
+        height:4px;
+
+        flex-basis:4px;
+    }
+
+    .bkx-live-label strong{
+        font-size:5.5px;
+        letter-spacing:1px;
+    }
+
+    .bkx-live-label img{
+        width:clamp(58px, 7vw, 74px);
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:600px){
+
+    .bkx-head-meta{
+        min-width:52px;
+        gap:8px;
+    }
+
+    .bkx-head-logo{
+        width:44px;
+    }
+
+    .bkx-head-logo img{
+        padding:5px;
+    }
+
+    .bkx-head-est{
+        gap:4px;
+        margin-top:3px;
+    }
+
+    .bkx-head-est small{
+        font-size:5px;
+        letter-spacing:.9px;
+    }
+
+    .bkx-live-label{
+        gap:4px;
+    }
+
+    .bkx-live-label span{
+        width:4px;
+        height:4px;
+
+        flex-basis:4px;
+    }
+
+    .bkx-live-label strong{
+        font-size:4.8px;
+        letter-spacing:.8px;
+    }
+
+    .bkx-live-label img{
+        width:clamp(52px, 15vw, 68px);
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media(max-width:380px){
+
+    .bkx-head-meta{
+        min-width:46px;
+        gap:7px;
+    }
+
+    .bkx-head-logo{
+        width:39px;
+    }
+
+    .bkx-head-logo img{
+        padding:4px;
+    }
+
+    .bkx-head-est{
+        gap:3px;
+    }
+
+    .bkx-head-est small{
+        font-size:4.5px;
+        letter-spacing:.7px;
+    }
+
+    .bkx-live-label strong{
+        font-size:4.3px;
+        letter-spacing:.65px;
+    }
+
+    .bkx-live-label img{
+        width:54px;
+    }
+
+}
+</style>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================================================
+         CATEGORY NAV
+    ========================================================== -->
+
+    <div class="bkx-category-nav">
+
+        <button class="bkx-category active" data-filter="all" type="button">
+            <span>01</span> All Stories
+        </button>
+
+        <button class="bkx-category" data-filter="nature" type="button">
+            <span>02</span> Nature
+        </button>
+
+        <button class="bkx-category" data-filter="culture" type="button">
+            <span>03</span> Culture
+        </button>
+
+        <button class="bkx-category" data-filter="life" type="button">
+            <span>04</span> Village Life
+        </button>
+
+        <button class="bkx-category" data-filter="people" type="button">
+            <span>05</span> People
+        </button>
+
+    </div>
+
+
+    <!-- =========================================================
+         MAIN EDITORIAL STAGE
+    ========================================================== -->
+
+    <div class="bkx-stage">
+
+        <!-- LEFT INDEX -->
+
+        <aside class="bkx-side-info bkx-side-left">
+
+            <div class="bkx-side-top">
+                <span class="bkx-side-caption">FRAME</span>
+
+                <strong id="bkxSideNumber">01</strong>
+
+                <span class="bkx-side-total">
+                    / <b id="bkxSideTotal">20</b>
+                </span>
+            </div>
+
+            <div class="bkx-side-track">
+                <span id="bkxSideProgress"></span>
+            </div>
+
+            <span class="bkx-side-word">
+                MEMORIES
+            </span>
+
+        </aside>
+
+
+        <!-- =====================================================
+             CENTER VISUAL
+        ====================================================== -->
+
+        <div class="bkx-visual">
+
+            <div class="bkx-image-shadow"></div>
+
+            <div class="bkx-image-frame"></div>
+            <div class="bkx-image-frame bkx-image-frame-two"></div>
+
+            <div class="bkx-main-image" id="bkxImageBox">
+
+                <img
+                    id="bkxMainImage"
+                    src="gallery imgs/img1.jpg"
+                    alt="Village Fields"
+                    draggable="false"
+                >
+
+                <div class="bkx-image-overlay"></div>
+                <div class="bkx-image-grain"></div>
+
+                <div class="bkx-image-top">
+
+                    <span>BHAMORI KHURD</span>
+                    <i></i>
+
+                    <span id="bkxImageCategory">
+                        NATURE
+                    </span>
+
+                </div>
+
+                <div class="bkx-image-location">
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    <span id="bkxImageLocation">
+                        Aligarh · Uttar Pradesh
+                    </span>
+
+                </div>
+
+                <div class="bkx-image-content">
+
+                    <div class="bkx-image-index">
+
+                        <span id="bkxCurrent">01</span>
+                        <b>/</b>
+                        <span id="bkxTotal">08</span>
+
+                    </div>
+
+                    <h3 id="bkxTitle">
+                        Village Fields 
+                    </h3>
+
+                    <p id="bkxDescription">
+                        Green farms and peaceful mornings
+                        surrounded by the beauty of nature.
+                    </p>
+
+                </div>
+
+                <div class="bkx-image-year">
+                    BHAMORI · 2026
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 THUMBNAILS
+            ================================================== -->
+
+            <div class="bkx-thumb-area">
+
+                <button
+                    class="bkx-thumb-arrow bkx-thumb-prev"
+                    type="button"
+                    aria-label="Previous thumbnails"
+                >
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+
+                <div
+                    class="bkx-thumbs"
+                    id="bkxThumbs"
+                    aria-label="Gallery thumbnails"
+                ></div>
+
+                <button
+                    class="bkx-thumb-arrow bkx-thumb-next"
+                    type="button"
+                    aria-label="Next thumbnails"
+                >
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================================
+             RIGHT INFORMATION
+        ====================================================== -->
+
+        <aside class="bkx-side-right">
+
+            <div class="bkx-location">
+
+                <div class="bkx-location-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+
+                <div>
+
+                    <span class="bkx-mini-label">
+                        CURRENT FRAME
+                    </span>
+
+                    <strong>
+                        Bhamori Khurd
+                    </strong>
+
+                    <small id="bkxRightLocation">
+                        Aligarh · Uttar Pradesh
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <div class="bkx-right-story">
+
+                <span>VISUAL STORY</span>
+
+                <h3 id="bkxRightTitle">
+                    Where ordinary moments
+                    become <em>memories.</em>
+                </h3>
+
+                <p id="bkxRightText">
+                    Every frame carries a small piece of village life —
+                    the fields, homes, festivals and familiar faces
+                    that make this place feel like home.
+                </p>
+
+            </div>
+
+
+            <div class="bkx-meta-grid">
+
+                <div>
+                    <span>COLLECTION</span>
+                    <strong id="bkxMetaCollection">
+                        Nature
+                    </strong>
+                </div>
+
+                <div>
+                    <span>YEAR</span>
+                    <strong>2026</strong>
+                </div>
+
+                <div>
+                    <span>ARCHIVE</span>
+                    <strong id="bkxMetaNumber">
+                        01 / 20
+                    </strong>
+                </div>
+
+                <div>
+                    <span>STATUS</span>
+                    <strong>LIVE</strong>
+                </div>
+
+            </div>
+
+
+            <div class="bkx-progress-wrap">
+
+                <div class="bkx-progress-head">
+
+                    <span>ARCHIVE PROGRESS</span>
+
+                    <strong id="bkxProgressPercent">
+                        12%
+                    </strong>
+
+                </div>
+
+                <div class="bkx-progress">
+                    <span id="bkxProgressBar"></span>
+                </div>
+
+            </div>
+
+
+            <div class="bkx-control-row">
+
+                <button
+                    class="bkx-arrow bkx-prev"
+                    type="button"
+                    aria-label="Previous image"
+                >
+                    <i class="fa-solid fa-arrow-left"></i>
+                </button>
+
+                <button
+                    class="bkx-play"
+                    id="bkxPlay"
+                    type="button"
+                    aria-label="Pause slideshow"
+                >
+                    <i class="fa-solid fa-pause"></i>
+                    <span>PAUSE STORY</span>
+                </button>
+
+                <button
+                    class="bkx-arrow bkx-next"
+                    type="button"
+                    aria-label="Next image"
+                >
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+            </div>
+
+
+            <div class="bkx-explore-note">
+
+                <span></span>
+
+                <small>
+                    SWIPE / ARROW KEYS TO EXPLORE
+                </small>
+
+            </div>
+
+        </aside>
+
+    </div>
+
+
+   
+
+
+
+
+<!-- =========================================================
+    
+     TASK 01 — IMAGE GALLERY
+========================================================= -->
+
+<div class="bkxv-connect" id="bkxvConnect">
+
+    <!-- Background -->
+    <div class="bkxv-connect-bg"></div>
+
+    <!-- Cream Treatment -->
+    <div class="bkxv-connect-shade"></div>
+
+    <!-- Decorative Corners -->
+    <span class="bkxv-connect-corner bkxv-connect-corner-tl"></span>
+    <span class="bkxv-connect-corner bkxv-connect-corner-br"></span>
+
+
+    <div class="bkxv-connect-content">
+
+        <!-- =================================================
+             INTRO
+        ================================================== -->
+
+        <div class="bkxv-connect-intro">
+
+           <span class="bkxv-connect-internship">
+   <img 
+    src="gallery imgs/codealphalogo.png" 
+    alt="CodeAlpha"
+    onclick="window.open('https://www.codealpha.tech/', '_blank')"
+    role="link"
+    tabindex="0"
+    aria-label="Open CodeAlpha website"
+    style=" 
+        width:clamp(100px, 10vw, 130px); 
+        height:clamp(30px, 3.2vw, 38px); 
+        object-fit:contain; 
+        object-position:left center; 
+        display:inline-block; 
+        vertical-align:middle; 
+        margin:0; 
+        padding:0;
+        cursor:pointer;
+    " 
+>
+     Project 01
+</span>
+
+           
+            <h3>
+                Connect with<br>
+                <em>the village.</em>
+            </h3>
+
+            <p>
+                Have a memory, story or local moment
+                worth preserving?
+            </p>
+
+            <span class="bkxv-connect-note">
+                SHARE · REMEMBER · PRESERVE
+            </span>
+
+        </div>
+
+
+        <!-- =================================================
+             FORM
+        ================================================== -->
+
+        <form
+            class="bkxv-connect-form"
+            id="bkxvConnectForm"
+            action="https://formsubmit.co/ajax/ydvaman2326@gmail.com"
+            method="POST"
+        >
+
+            <!-- FormSubmit Settings -->
+
+            <input
+                type="hidden"
+                name="_subject"
+                value="CodeAlpha Task 1 —  Image Gallery"
+            >
+
+            <input
+                type="hidden"
+                name="_template"
+                value="table"
+            >
+
+            <input
+                type="hidden"
+                name="_captcha"
+                value="false"
+            >
+
+
+            <!-- =================================================
+                PROJECT DATA
+            ================================================== -->
+
+            <input
+                type="hidden"
+                name="internship"
+                value="CodeAlpha Frontend Development Internship"
+            >
+
+            <input
+                type="hidden"
+                name="task"
+                value="Task 1 — Image Gallery"
+            >
+
+            
+            <input
+                type="hidden"
+                name="developer"
+                value="Aman Kumar"
+            >
+
+            <input
+                type="hidden"
+                name="feedback_context"
+                value="CodeAlpha reviewer feedback for Task 1 — Image Gallery"
+            >
+
+
+            <!-- Honeypot -->
+
+            <input
+                type="text"
+                name="_honey"
+                class="bkxv-honey"
+                tabindex="-1"
+                autocomplete="off"
+            >
+
+
+            <!-- =================================================
+                 01 — NAME
+            ================================================== -->
+
+          <div class="bkxv-field">
+
+    <span>NAME</span>
+
+    <input
+        type="text"
+        name="name"
+        placeholder="Your name"
+        autocomplete="name"
+        required
+    >
+
+</div>
+
+            <!-- =================================================
+                 02 — EMAIL
+            ================================================== -->
+
+            <div class="bkxv-field">
+
+    <span>EMAIL</span>
+
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="Email address"
+                    autocomplete="email"
+                    required
+                >
+
+            </div>
+
+
+            <!-- =================================================
+                 03 — STORY
+            ================================================== -->
+
+            <div class="bkxv-field bkxv-message-field">
+
+    <span>MSG</span>
+
+                <textarea
+                    name="message"
+                    placeholder="Tell us something about the Gallery..."
+                    rows="2"
+                    required
+                ></textarea>
+
+            </div>
+
+
+            <!-- =================================================
+                 CODEALPHA FEEDBACK LABEL
+            ================================================== -->
+
+           <div class="bkxv-feedback-label">
+   <img
+    src="gallery imgs/codealphalogo.png"
+    alt="CodeAlpha"
+    onclick="window.open('https://www.codealpha.tech/', '_blank')"
+    role="link"
+    tabindex="0"
+    aria-label="Open CodeAlpha website"
+    style="
+        width:clamp(80px, 8vw, 105px);
+        height:clamp(24px, 2.6vw, 32px);
+        object-fit:contain;
+        object-position:left center;
+        display:inline-block;
+        vertical-align:middle;
+        margin:0 5px 0 0;
+        padding:0;
+        cursor:pointer;
+    "
+>
+    REVIEW :  your feedback is valuable
+</div>
+
+
+            <!-- =================================================
+                 04 — FEEDBACK
+            ================================================== -->
+
+            <div class="bkxv-field bkxv-feedback-field">
+
+
+                <textarea
+                    name="codealpha_feedback"
+                    placeholder="CodeAlpha feedback / review (optional)"
+                    rows="2"
+                ></textarea>
+
+            </div>
+
+
+            <!-- =================================================
+                 SUBMIT
+            ================================================== -->
+
+            <div class="bkxv-submit-row">
+
+                <small>
+                    YOUR STORY BECOMES PART OF THE ARCHIVE
+                </small>
+
+                <button
+                    type="submit"
+                    id="bkxvConnectSubmit"
+                >
+                    SEND STORY
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+
+    <!-- =====================================================
+         SUCCESS
+    ====================================================== -->
+
+    <div
+        class="bkxv-connect-success"
+        id="bkxvConnectSuccess"
+        aria-live="polite"
+    >
+
+        <i class="fa-solid fa-circle-check"></i>
+
+        <span>
+            Your story has been received.
+        </span>
+
+    </div>
+
+</div>
+
+
+
+<style>
+
+.bkxv-connect{
+
+    --bkxv-paper:#f8f4e9;
+    --bkxv-paper-2:#eee8da;
+
+    --bkxv-green:#2f3c33;
+    --bkxv-green-soft:#566258;
+
+    --bkxv-gold:#b38a3e;
+    --bkxv-gold-soft:#c7a76a;
+
+    --bkxv-line:rgba(47,60,51,.18);
+    --bkxv-text:#625d53;
+
+    position:relative;
+
+    width:100%;
+
+    margin:55px auto 0;
+
+    padding:0;
+
+    background:transparent !important;
+
+    color:var(--bkxv-green);
+
+    overflow:hidden;
+}
+
+
+/* =========================================================
+   REMOVE OLD BACKGROUND SYSTEM
+========================================================= */
+
+.bkxv-connect-bg,
+.bkxv-connect-shade{
+
+    display:none !important;
+}
+
+
+/* =========================================================
+   TOP EDITORIAL RULE
+========================================================= */
+
+.bkxv-connect::before{
+
+    content:"";
+
+    display:block;
+
+    width:100%;
+
+    height:1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent 0%,
+            var(--bkxv-gold) 12%,
+            var(--bkxv-gold) 28%,
+            var(--bkxv-line) 28%,
+            var(--bkxv-line) 100%
+        );
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.bkxv-connect-content{
+
+    position:relative;
+
+    display:grid;
+
+    grid-template-columns:38% 62%;
+
+    min-height:245px;
+
+    padding:34px 0 38px;
+
+    border-bottom:
+        1px solid var(--bkxv-line);
+}
+
+
+/* =========================================================
+   LEFT — EDITORIAL INTRO
+========================================================= */
+
+.bkxv-connect-intro{
+
+    position:relative;
+
+    padding:
+        2px 45px 0 4px;
+
+    border-right:
+        1px solid var(--bkxv-line);
+}
+
+
+/* =========================================================
+   INTERNSHIP LABEL
+========================================================= */
+
+.bkxv-connect-internship{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:7px;
+
+    margin-bottom:12px;
+
+    padding-bottom:6px;
+
+    border-bottom:
+        1px solid rgba(179,138,62,.35);
+
+    font-family:"Poppins",sans-serif;
+
+    font-size:7px;
+
+    font-weight:700;
+
+    letter-spacing:1.45px;
+
+    color:#8c692e;
+}
+
+.bkxv-connect-internship::before{
+
+    content:"";
+
+    width:5px;
+    height:5px;
+
+    border-radius:50%;
+
+    background:
+        var(--bkxv-gold);
+}
+
+
+/* =========================================================
+   TASK LABEL
+========================================================= */
+
+.bkxv-connect-kicker{
+
+    display:block;
+
+    margin-bottom:9px;
+
+    font-family:"Poppins",sans-serif;
+
+    font-size:8px;
+
+    font-weight:700;
+
+    letter-spacing:2.5px;
+
+    color:
+        var(--bkxv-gold);
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.bkxv-connect-intro h3{
+
+    margin:0;
+
+    font-family:"Poppins",sans-serif;
+
+    font-size:26px;
+
+    line-height:1.08;
+
+    font-weight:600;
+
+    letter-spacing:-.6px;
+
+    color:
+        var(--bkxv-green);
+}
+
+.bkxv-connect-intro h3 em{
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:29px;
+
+    font-weight:400;
+
+    color:
+        var(--bkxv-gold);
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.bkxv-connect-intro p{
+
+    max-width:230px;
+
+    margin:14px 0 18px;
+
+    font-family:"Poppins",sans-serif;
+
+    font-size:10px;
+
+    line-height:1.7;
+
+    color:
+        var(--bkxv-text);
+}
+
+
+/* =========================================================
+   NOTE
+========================================================= */
+
+.bkxv-connect-note{
+
+    font-family:"Poppins",sans-serif;
+
+    font-size:7px;
+
+    font-weight:700;
+
+    letter-spacing:1.7px;
+
+    color:
+        rgba(47,60,51,.42);
+}
+
+
+/* =========================================================
+   FORM AREA
+========================================================= */
+
+.bkxv-connect-form{
+
+    padding:
+        0 4px 0 45px;
+}
+
+
+/* =========================================================
+   FIELD
+========================================================= */
+
+.bkxv-field{
+
+    display:flex;
+
+    align-items:center;
+
+    width:100%;
+
+    min-height:39px;
+
+    border-bottom:
+        1px solid rgba(47,60,51,.20);
+
+    transition:
+        border-color .3s ease;
+}
+
+.bkxv-field:focus-within{
+
+    border-bottom-color:
+        var(--bkxv-gold);
+}
+
+
+/* =========================================================
+   FIELD NUMBER
+========================================================= */
+
+.bkxv-field > span{
+
+    width:29px;
+
+    flex:0 0 29px;
+
+    font-family:"Poppins",sans-serif;
+
+    font-size:7px;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+    color:
+        var(--bkxv-gold);
+}
+
+
+/* =========================================================
+   INPUT
+========================================================= */
+
+.bkxv-field input,
+.bkxv-field textarea{
+
+    width:100%;
+
+    border:0 !important;
+
+    outline:0 !important;
+
+    background:transparent !important;
+
+    padding:
+        10px 4px;
+
+    font-family:"Poppins",sans-serif;
+
+    font-size:10px;
+
+    font-weight:500;
+
+    color:
+        var(--bkxv-green) !important;
+}
+
+.bkxv-field input::placeholder,
+.bkxv-field textarea::placeholder{
+
+    color:
+        rgba(47,60,51,.52) !important;
+
+    opacity:1 !important;
+}
+
+
+/* =========================================================
+   TEXTAREA
+========================================================= */
+
+.bkxv-field textarea{
+
+    min-height:55px;
+
+    resize:none;
+
+    line-height:1.55;
+
+    padding-top:12px;
+}
+
+.bkxv-message-field,
+.bkxv-feedback-field{
+
+    align-items:flex-start;
+}
+
+
+/* =========================================================
+   FEEDBACK LABEL
+========================================================= */
+
+.bkxv-feedback-label{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    margin:
+        13px 0 5px;
+
+    font-family:"Poppins",sans-serif;
+
+    font-size:7px;
+
+    font-weight:700;
+
+    letter-spacing:1.35px;
+
+    color:
+        #8c692e;
+}
+
+.bkxv-feedback-label::before{
+
+    content:"";
+
+    width:14px;
+
+    height:1px;
+
+    background:
+        var(--bkxv-gold);
+}
+
+
+/* =========================================================
+   SUBMIT ROW
+========================================================= */
+
+.bkxv-submit-row{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:18px;
+
+    padding-top:15px;
+}
+
+.bkxv-submit-row small{
+
+    font-family:"Poppins",sans-serif;
+
+    font-size:7px;
+
+    line-height:1.5;
+
+    letter-spacing:1px;
+
+    color:
+        rgba(47,60,51,.43);
+}
+
+
+/* =========================================================
+   BUTTON — WEBSITE STYLE
+========================================================= */
+
+#bkxvConnectSubmit{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:9px;
+
+    padding:
+        8px 0;
+
+    border:0 !important;
+
+    border-bottom:
+        1px solid var(--bkxv-gold) !important;
+
+    background:transparent !important;
+
+    color:
+        var(--bkxv-green) !important;
+
+    font-family:"Poppins",sans-serif;
+
+    font-size:8px;
+
+    font-weight:700;
+
+    letter-spacing:1.15px;
+
+    cursor:pointer;
+
+    transition:
+        color .3s ease,
+        border-color .3s ease;
+}
+
+#bkxvConnectSubmit i{
+
+    color:
+        var(--bkxv-gold);
+
+    transition:
+        transform .3s ease;
+}
+
+#bkxvConnectSubmit:hover{
+
+    color:
+        var(--bkxv-gold) !important;
+
+    border-bottom-color:
+        var(--bkxv-green) !important;
+}
+
+#bkxvConnectSubmit:hover i{
+
+    transform:
+        translateX(4px);
+}
+
+#bkxvConnectSubmit:disabled{
+
+    opacity:.55;
+
+    cursor:wait;
+}
+
+
+/* =========================================================
+   SUCCESS
+========================================================= */
+
+.bkxv-connect-success{
+
+    position:absolute;
+
+    right:0;
+
+    bottom:16px;
+
+    z-index:20;
+
+    display:none;
+
+    align-items:center;
+
+    gap:7px;
+
+    padding:7px 11px;
+
+    background:
+        var(--bkxv-green);
+
+    color:#f8f4e9;
+
+    font-family:"Poppins",sans-serif;
+
+    font-size:8px;
+
+    letter-spacing:.4px;
+
+    animation:
+        bkxvConnectSuccess .35s ease;
+}
+
+.bkxv-connect-success.is-visible{
+
+    display:flex;
+}
+
+.bkxv-connect-success i{
+
+    color:
+        var(--bkxv-gold-soft);
+}
+
+@keyframes bkxvConnectSuccess{
+
+    from{
+        opacity:0;
+        transform:translateY(6px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+
+/* =========================================================
+   REMOVE OLD CORNERS
+========================================================= */
+
+.bkxv-connect-corner{
+
+    display:none !important;
+}
+
+
+/* =========================================================
+   HONEYPOT
+========================================================= */
+
+.bkxv-honey{
+
+    position:absolute !important;
+
+    left:-9999px !important;
+
+    width:1px !important;
+
+    height:1px !important;
+
+    opacity:0 !important;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:650px){
+
+    .bkxv-connect{
+
+        margin-top:38px;
+    }
+
+    .bkxv-connect-content{
+
+        grid-template-columns:1fr;
+
+        min-height:auto;
+
+        padding:
+            28px 0 30px;
+    }
+
+    .bkxv-connect-intro{
+
+        padding:
+            0 0 24px 0;
+
+        border-right:0;
+
+        border-bottom:
+            1px solid var(--bkxv-line);
+    }
+
+    .bkxv-connect-intro h3{
+
+        font-size:22px;
+    }
+
+    .bkxv-connect-intro h3 em{
+
+        font-size:25px;
+    }
+
+    .bkxv-connect-form{
+
+        padding:
+            25px 0 0;
+    }
+
+    .bkxv-submit-row{
+
+        align-items:flex-start;
+    }
+
+    .bkxv-submit-row small{
+
+        max-width:155px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media(max-width:420px){
+
+    .bkxv-connect-content{
+
+        padding:
+            25px 0 27px;
+    }
+
+    .bkxv-connect-intro h3{
+
+        font-size:20px;
+    }
+
+    .bkxv-connect-intro h3 em{
+
+        font-size:23px;
+    }
+
+    .bkxv-field input,
+    .bkxv-field textarea{
+
+        font-size:9.5px;
+    }
+
+    #bkxvConnectSubmit{
+
+        font-size:7px;
+    }
+}
+ </style>
+
+
+<script>
+
+/* =========================================================
+   FORM SUBMIT —  TASK 01
+========================================================= */
+
+(function(){
+
+    const form =
+        document.getElementById("bkxvConnectForm");
+
+    const button =
+        document.getElementById("bkxvConnectSubmit");
+
+    const success =
+        document.getElementById("bkxvConnectSuccess");
+
+
+    if(!form || !button || !success) return;
+
+
+    form.addEventListener(
+        "submit",
+        async function(event){
+
+            event.preventDefault();
+
+
+            const originalHTML =
+                button.innerHTML;
+
+
+            /* Loading */
+
+            button.disabled = true;
+
+            button.innerHTML = `
+                SENDING
+                <i class="fa-solid fa-spinner fa-spin"></i>
+            `;
+
+
+            try{
+
+                const response =
+                    await fetch(
+                        form.action,
+                        {
+                            method:"POST",
+
+                            body:
+                                new FormData(form),
+
+                            headers:{
+                                "Accept":
+                                    "application/json"
+                            }
+                        }
+                    );
+
+
+                if(!response.ok){
+
+                    throw new Error(
+                        "Submission failed"
+                    );
+                }
+
+
+                /* Reset */
+
+                form.reset();
+
+
+                /* Sent */
+
+                button.innerHTML = `
+                    SENT
+                    <i class="fa-solid fa-check"></i>
+                `;
+
+
+                /* Success */
+
+                success.classList.add(
+                    "is-visible"
+                );
+
+
+                /* Restore */
+
+                setTimeout(
+                    function(){
+
+                        success.classList.remove(
+                            "is-visible"
+                        );
+
+                        button.disabled =
+                            false;
+
+                        button.innerHTML =
+                            originalHTML;
+
+                    },
+                    4200
+                );
+
+
+            }catch(error){
+
+                /* Error */
+
+                button.disabled =
+                    false;
+
+                button.innerHTML = `
+                    TRY AGAIN
+                    <i class="fa-solid fa-rotate-right"></i>
+                `;
+
+
+                setTimeout(
+                    function(){
+
+                        button.innerHTML =
+                            originalHTML;
+
+                    },
+                    2500
+                );
+
+            }
+
+        }
+    );
+
+})();
+
+</script>
+
+<br> <br> 
+
+    <!-- =========================================================
+         FOOTER
+    ========================================================== -->
+
+<div class="bkx-footer-internship-note">
+    <span>From an internship task to a visual story of village life.</span>
+</div>
+<style> 
+    /* =========================================================
+ FOOTER 
+========================================================= */
+
+.bkx-footer-internship-note{
+    position:relative;
+
+    width:100%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    margin-top:10px;
+    padding:4px 10px 8px;
+
+    text-align:center;
+
+    opacity:0;
+    transform:translateY(8px);
+
+    animation:
+        bkxInternshipReveal .8s cubic-bezier(.22,.61,.36,1) .35s forwards;
+
+    overflow:hidden;
+}
+
+
+/* TEXT */
+
+.bkx-footer-internship-note span{
+    position:relative;
+
+    display:inline-block;
+
+    font-family:"Cormorant Garamond", Georgia, serif;
+
+    font-size:12px;
+    font-style:italic;
+    font-weight:600;
+
+    letter-spacing:.45px;
+    line-height:1.5;
+
+    color:#526057;
+
+    white-space:normal;
+}
+
+
+/* GOLD UNDERLINE */
+
+.bkx-footer-internship-note span::after{
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+    bottom:-4px;
+
+    width:0;
+    height:1px;
+
+    transform:translateX(-50%);
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        #b38a3e,
+        transparent
+    );
+
+    animation:
+        bkxInternshipLine 1s ease-out 1s forwards;
+}
+
+
+/* SMALL GOLD DOT */
+
+.bkx-footer-internship-note::before{
+    content:"";
+
+    position:absolute;
+
+    width:4px;
+    height:4px;
+
+    left:calc(50% - 120px);
+    top:50%;
+
+    transform:translateY(-50%) scale(0);
+
+    border-radius:50%;
+
+    background:#b38a3e;
+
+    box-shadow:
+        0 0 0 4px rgba(179,138,62,.09);
+
+    animation:
+        bkxInternshipDot .45s ease-out 1.05s forwards;
+}
+
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes bkxInternshipReveal{
+
+    0%{
+        opacity:0;
+        transform:translateY(8px);
+        filter:blur(3px);
+    }
+
+    100%{
+        opacity:1;
+        transform:translateY(0);
+        filter:blur(0);
+    }
+
+}
+
+@keyframes bkxInternshipLine{
+
+    0%{
+        width:0;
+        opacity:0;
+    }
+
+    100%{
+        width:70%;
+        max-width:310px;
+        opacity:.7;
+    }
+
+}
+
+@keyframes bkxInternshipDot{
+
+    0%{
+        transform:translateY(-50%) scale(0);
+        opacity:0;
+    }
+
+    70%{
+        transform:translateY(-50%) scale(1.25);
+    }
+
+    100%{
+        transform:translateY(-50%) scale(1);
+        opacity:1;
+    }
+
+}
+
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.bkx-footer-internship-note span{
+    transition:
+        color .3s ease,
+        letter-spacing .3s ease;
+}
+
+.bkx-footer-internship-note:hover span{
+    color:#2f3c33;
+    letter-spacing:.65px;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:600px){
+
+    .bkx-footer-internship-note{
+        margin-top:8px;
+        padding:3px 14px 7px;
+
+        animation-delay:.25s;
+    }
+
+    .bkx-footer-internship-note span{
+        font-size:10px;
+        letter-spacing:.3px;
+        line-height:1.45;
+    }
+
+    .bkx-footer-internship-note span::after{
+        bottom:-3px;
+    }
+
+    .bkx-footer-internship-note::before{
+        display:none;
+    }
+
+    @keyframes bkxInternshipLine{
+
+        0%{
+            width:0;
+            opacity:0;
+        }
+
+        100%{
+            width:55%;
+            max-width:190px;
+            opacity:.65;
+        }
+
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media(max-width:380px){
+
+    .bkx-footer-internship-note{
+        padding-left:8px;
+        padding-right:8px;
+    }
+
+    .bkx-footer-internship-note span{
+        font-size:9px;
+    }
+
+}
+</style>
+<!-- =========================================================
+      FOOTNOTE
+========================================================= -->
+
+<div class="bkx-internship-note">
+
+    <div class="bkx-internship-line"></div>
+
+    <div class="bkx-internship-content">
+
+       <span class="bkx-internship-kicker">
+    <img 
+    src="gallery imgs/codealphalogo.png" 
+    alt="CodeAlpha"
+    onclick="window.open('https://www.codealpha.tech/', '_blank')"
+    role="link"
+    tabindex="0"
+    aria-label="Open CodeAlpha website"
+    style=" 
+        width:clamp(120px, 12vw, 150px); 
+        height:clamp(34px, 3.8vw, 44px); 
+        object-fit:contain; 
+        object-position:left center; 
+        display:inline-block; 
+        vertical-align:middle; 
+        margin:0; 
+        padding:0;
+        cursor:pointer;
+    " 
+>
+    · FRONTEND DEVELOPMENT INTERNSHIP
+</span>
+
+        <span class="bkx-internship-separator">/</span>
+
+        <strong>
+            TASK 01 — IMAGE GALLERY
+        </strong>
+
+        <span class="bkx-internship-status">
+            <i></i>
+            ACTIVE
+        </span>
+
+    </div>
+
+    <div class="bkx-internship-meta">
+        Designed & developed by Aman Kumar
+    </div>
+
+</div>
+<style>
+    /* =========================================================
+     FOOTNOTE
+========================================================= */
+
+.bkx-internship-note{
+    width:100%;
+    margin:42px 0 0;
+    padding:14px 0 0;
+
+    font-family:"Poppins",sans-serif;
+}
+
+.bkx-internship-line{
+    width:100%;
+    height:1px;
+
+    background:rgba(47,60,51,.12);
+}
+
+.bkx-internship-content{
+    display:flex;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:9px;
+
+    padding-top:12px;
+}
+
+.bkx-internship-kicker{
+    font-size:6.5px;
+    font-weight:800;
+    letter-spacing:1.6px;
+
+    color:#8c692e;
+}
+
+.bkx-internship-separator{
+    font-size:9px;
+    color:rgba(47,60,51,.25);
+}
+
+.bkx-internship-content strong{
+    font-size:6.5px;
+    font-weight:700;
+    letter-spacing:1.25px;
+
+    color:#2f3c33;
+}
+
+.bkx-internship-status{
+    display:inline-flex;
+    align-items:center;
+    gap:5px;
+
+    margin-left:auto;
+
+    font-size:6px;
+    font-weight:700;
+    letter-spacing:1.1px;
+
+    color:#667267;
+}
+
+.bkx-internship-status i{
+    width:5px;
+    height:5px;
+
+    border-radius:50%;
+    background:#5f8068;
+
+    box-shadow:
+        0 0 0 3px rgba(95,128,104,.10);
+}
+
+.bkx-internship-meta{
+    margin-top:8px;
+
+    font-size:6px;
+    font-weight:500;
+    letter-spacing:1px;
+
+    color:rgba(47,60,51,.38);
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:600px){
+
+    .bkx-internship-note{
+        margin-top:30px;
+        padding-top:11px;
+    }
+
+    .bkx-internship-content{
+        gap:6px;
+        padding-top:10px;
+    }
+
+    .bkx-internship-kicker{
+        font-size:5.5px;
+        letter-spacing:1.25px;
+    }
+
+    .bkx-internship-content strong{
+        font-size:5.5px;
+        letter-spacing:.9px;
+    }
+
+    .bkx-internship-separator{
+        font-size:7px;
+    }
+
+    .bkx-internship-status{
+        width:100%;
+        margin-left:0;
+        margin-top:2px;
+
+        font-size:5.5px;
+    }
+
+    .bkx-internship-meta{
+        font-size:5.5px;
+        letter-spacing:.8px;
+    }
+}
+</style>
+
+</section>
+
+
+
+<script src="script.js"></script>
+
+
+<style> /* =========================================================
+   BKX MOBILE  HEADER
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .bkx-task-strip {
+        width: 100%;
+
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+
+        grid-template-rows: auto auto auto;
+
+        align-items: center;
+
+        column-gap: 8px;
+        row-gap: 4px;
+
+        padding-bottom: 10px;
+        margin-bottom: 18px;
+
+        border-bottom: 1px solid rgba(47,60,51,.13);
+
+        box-sizing: border-box;
+    }
+
+
+    /* -----------------------------------------
+       REMOVE OLD DOT / DIVIDERS
+    ----------------------------------------- */
+
+    .bkx-task-dot,
+    .bkx-task-divider {
+        display: none;
+    }
+
+
+    /* -----------------------------------------
+       CODEALPHA LOGO — CENTER TOP
+    ----------------------------------------- */
+
+    .bkx-task-brand {
+        grid-column: 2;
+        grid-row: 1;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        width: 100%;
+        min-width: 0;
+
+        line-height: 1;
+    }
+
+    .bkx-task-brand img {
+        width: 105px !important;
+        height: 30px !important;
+
+        object-fit: contain;
+        object-position: center;
+
+        display: block;
+    }
+
+
+    /* -----------------------------------------
+       TASK — LEFT
+    ----------------------------------------- */
+
+    .bkx-task-strip strong {
+        grid-column: 1;
+        grid-row: 2 / 4;
+
+        align-self: center;
+
+        width: 100%;
+
+        text-align: left;
+
+        font-size: 5.8px;
+        font-weight: 700;
+
+        line-height: 1.35;
+        letter-spacing: .7px;
+
+        color: #2f3c33;
+
+        white-space: normal;
+    }
+
+
+    /* -----------------------------------------
+       CENTER — INTERNSHIP
+    ----------------------------------------- */
+
+    .bkx-task-name {
+        grid-column: 2;
+        grid-row: 2;
+
+        width: max-content;
+        max-width: 100%;
+
+        text-align: center;
+
+        font-size: 6.5px;
+        font-weight: 800;
+
+        line-height: 1;
+
+        letter-spacing: 1.15px;
+
+        color: #8c692e;
+
+        white-space: nowrap;
+
+        padding: 0;
+        margin: 0;
+
+        background: none;
+        border: 0;
+    }
+
+
+    /* -----------------------------------------
+       SMALL GOLD LINE UNDER INTERNSHIP
+    ----------------------------------------- */
+
+    .bkx-task-name::after {
+        content: "";
+
+        display: block;
+
+        width: 24px;
+        height: 1px;
+
+        margin: 4px auto 0;
+
+        background: rgba(179,138,62,.55);
+    }
+
+
+    /* -----------------------------------------
+       STATUS — RIGHT
+    ----------------------------------------- */
+
+    .bkx-task-status {
+        grid-column: 3;
+        grid-row: 2 / 4;
+
+        align-self: center;
+
+        width: 100%;
+
+        margin: 0;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: flex-end;
+
+        gap: 4px;
+
+        text-align: right;
+
+        font-size: 4.9px;
+        font-weight: 700;
+
+        line-height: 1.3;
+
+        letter-spacing: .65px;
+
+        color: #667267;
+
+        white-space: nowrap;
+    }
+
+
+    /* -----------------------------------------
+       STATUS DOT
+    ----------------------------------------- */
+
+    .bkx-task-status i {
+        width: 4px;
+        height: 4px;
+
+        flex: 0 0 4px;
+
+        margin: 0;
+
+        box-shadow:
+            0 0 0 3px rgba(95,128,104,.08);
+    }
+
+
+    /* =====================================================
+       MAIN HEADER
+    ===================================================== */
+
+    .bkx-title-row {
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .bkx-title-main {
+        min-width: 0;
+        max-width: calc(100% - 58px);
+    }
+
+
+    /* =====================================================
+       RIGHT PROFILE META
+    ===================================================== */
+
+    .bkx-head-meta {
+        width: 48px;
+        min-width: 48px;
+
+        flex: 0 0 48px;
+
+        gap: 7px;
+    }
+
+    .bkx-head-logo {
+        width: 42px;
+        height: 42px;
+    }
+
+    .bkx-head-logo img {
+        padding: 5px;
+    }
+
+    .bkx-head-est {
+        width: 100%;
+        margin-top: 2px;
+    }
+
+    .bkx-live-label {
+        width: 100%;
+
+        display: flex;
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 4px;
+    }
+
+    .bkx-internship-logos {
+        width: 100%;
+        gap: 4px;
+    }
+
+    .bkx-internship-logos img {
+        width: 37px;
+        max-width: 37px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+    .bkx-task-strip {
+        column-gap: 6px;
+        row-gap: 4px;
+    }
+
+    .bkx-task-brand img {
+        width: 96px !important;
+        height: 28px !important;
+    }
+
+    .bkx-task-strip strong {
+        font-size: 5.3px;
+        letter-spacing: .55px;
+    }
+
+    .bkx-task-name {
+        font-size: 6px;
+        letter-spacing: .95px;
+    }
+
+    .bkx-task-status {
+        font-size: 4.5px;
+        letter-spacing: .5px;
+    }
+
+    .bkx-task-name::after {
+        width: 20px;
+        margin-top: 3px;
+    }
+
+    .bkx-title-row {
+        gap: 9px;
+    }
+
+    .bkx-title-main {
+        max-width: calc(100% - 52px);
+    }
+
+    .bkx-head-meta {
+        width: 44px;
+        min-width: 44px;
+        flex-basis: 44px;
+    }
+
+    .bkx-head-logo {
+        width: 38px;
+        height: 38px;
+    }
+
+    .bkx-head-logo img {
+        padding: 4px;
+    }
+
+    .bkx-internship-logos {
+        gap: 3px;
+    }
+
+    .bkx-internship-logos img {
+        width: 34px;
+        max-width: 34px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .bkx-task-strip {
+        column-gap: 4px;
+    }
+
+    .bkx-task-brand img {
+        width: 88px !important;
+        height: 26px !important;
+    }
+
+    .bkx-task-strip strong {
+        font-size: 4.8px;
+        letter-spacing: .45px;
+    }
+
+    .bkx-task-name {
+        font-size: 5.6px;
+        letter-spacing: .8px;
+    }
+
+    .bkx-task-status {
+        font-size: 4.1px;
+        letter-spacing: .35px;
+    }
+
+    .bkx-head-meta {
+        width: 40px;
+        min-width: 40px;
+        flex-basis: 40px;
+    }
+
+    .bkx-head-logo {
+        width: 35px;
+        height: 35px;
+    }
+
+    .bkx-internship-logos img {
+        width: 30px;
+        max-width: 30px;
+    }
+}
+@media (max-width: 600px) {
+
+    .bkx-task-strip {
+        grid-template-columns: 1fr auto 1fr;
+        text-align: center;
+    }
+
+    /* CodeAlpha logo — exact center */
+    .bkx-task-brand {
+        grid-column: 2 !important;
+        grid-row: 1 !important;
+
+        justify-self: center;
+        align-self: center;
+
+        width: max-content;
+    }
+
+    .bkx-task-brand img {
+        display: block;
+
+        width: 105px !important;
+        height: 30px !important;
+
+        margin: 0 auto !important;
+
+        object-fit: contain;
+        object-position: center;
+    }
+
+    /* Internship text — center */
+    .bkx-task-name {
+        grid-column: 2 !important;
+        grid-row: 2 !important;
+
+        justify-self: center;
+
+        text-align: center;
+    }
+
+}
+/* =========================================================
+    — PREMIUM HIGHLIGHT
+========================================================= */
+
+.bkx-task-name {
+    position: relative;
+
+    color: #80622f !important;
+
+    font-weight: 700;
+
+    letter-spacing: 1.2px;
+
+    transition:
+        color .3s ease,
+        letter-spacing .3s ease;
+}
+
+/* subtle gold underline */
+.bkx-task-name::after {
+    content: "";
+
+    display: block;
+
+    width: 24px;
+    height: 1px;
+
+    margin: 5px auto 0;
+
+    background: rgba(179, 138, 62, .65);
+
+    transition:
+        width .35s ease,
+        background .35s ease;
+}
+
+/* hover */
+.bkx-task-name:hover {
+    color: #6f5428 !important;
+    letter-spacing: 1.35px;
+}
+
+.bkx-task-name:hover::after {
+    width: 38px;
+    background: #b38a3e;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .bkx-task-name {
+        font-size: 6.5px;
+
+        letter-spacing: 1px;
+
+        text-align: center;
+    }
+
+    .bkx-task-name::after {
+        width: 20px;
+        margin-top: 3px;
+    }
+}
+/* =========================================================
+   TASK 01 — IMAGE GALLERY
+========================================================= */
+
+.bkx-task-strip > strong {
+    display: inline-flex;
+    align-items: center;
+
+    font-size: 7px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    line-height: 1;
+
+    color: #536158 !important;
+
+    white-space: nowrap;
+
+    position: relative;
+
+    padding-left: 12px;
+
+    transition:
+        color .3s ease,
+        transform .3s ease;
+}
+
+
+/* small gold accent */
+.bkx-task-strip > strong::before {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    top: 50%;
+
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+
+    background: #b38a3e;
+
+    transform: translateY(-50%);
+
+    box-shadow: 0 0 0 3px rgba(179,138,62,.08);
+}
+
+
+/* subtle hover */
+.bkx-task-strip > strong:hover {
+    color: #8c692e !important;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .bkx-task-strip > strong {
+        font-size: 5.7px;
+        letter-spacing: .65px;
+        padding-left: 9px;
+    }
+
+    .bkx-task-strip > strong::before {
+        width: 4px;
+        height: 4px;
+    }
+}
+
+
+@media (max-width: 420px) {
+
+    .bkx-task-strip > strong {
+        font-size: 5.2px;
+        letter-spacing: .5px;
+        padding-left: 8px;
+    }
+
+    .bkx-task-strip > strong::before {
+        width: 3.5px;
+        height: 3.5px;
+    }
+}
+</style>
+<!-- =========================================================
+     CONTENT PROTECTION
+     Copy / Select / Cut / Paste / Drag / Right Click
+     + Common DevTools Shortcuts
+========================================================= -->
+
+<style>
+
+    /* =====================================================
+       NO TEXT SELECTION
+    ===================================================== */
+
+    #bkxGallery,
+    #bkxGallery * {
+        -webkit-user-select: none !important;
+        -moz-user-select: none !important;
+        -ms-user-select: none !important;
+        user-select: none !important;
+
+        -webkit-touch-callout: none !important;
+    }
+
+
+    /* =====================================================
+       IMAGE DRAG / SAVE PROTECTION
+    ===================================================== */
+
+    #bkxGallery img {
+        -webkit-user-drag: none !important;
+        user-drag: none !important;
+
+        user-select: none !important;
+
+        -webkit-touch-callout: none !important;
+    }
+
+</style>
+
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const gallery = document.getElementById("bkxGallery");
+
+    if (!gallery) return;
+
+
+    /* =====================================================
+       COPY
+    ===================================================== */
+
+    gallery.addEventListener("copy", function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        return false;
+    });
+
+
+    /* =====================================================
+       CUT
+    ===================================================== */
+
+    gallery.addEventListener("cut", function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        return false;
+    });
+
+
+    /* =====================================================
+       PASTE
+    ===================================================== */
+
+    gallery.addEventListener("paste", function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        return false;
+    });
+
+
+    /* =====================================================
+       TEXT SELECTION
+    ===================================================== */
+
+    gallery.addEventListener("selectstart", function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        return false;
+    });
+
+
+    /* =====================================================
+       DRAG CONTENT / IMAGES
+    ===================================================== */
+
+    gallery.addEventListener("dragstart", function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        return false;
+    });
+
+
+    /* =====================================================
+       RIGHT CLICK / CONTEXT MENU
+    ===================================================== */
+
+    gallery.addEventListener("contextmenu", function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        return false;
+    });
+
+
+    /* =====================================================
+       IMAGE PROTECTION
+    ===================================================== */
+
+    gallery.querySelectorAll("img").forEach(function (img) {
+
+        img.setAttribute("draggable", "false");
+
+        img.addEventListener("dragstart", function (e) {
+            e.preventDefault();
+            return false;
+        });
+
+        img.addEventListener("contextmenu", function (e) {
+            e.preventDefault();
+            return false;
+        });
+
+    });
+
+
+    /* =====================================================
+       KEYBOARD PROTECTION — INSIDE GALLERY
+    ===================================================== */
+
+    gallery.addEventListener("keydown", function (e) {
+
+        const key = e.key.toLowerCase();
+
+        /* Copy */
+        if ((e.ctrlKey || e.metaKey) && key === "c") {
+            e.preventDefault();
+            return false;
+        }
+
+        /* Cut */
+        if ((e.ctrlKey || e.metaKey) && key === "x") {
+            e.preventDefault();
+            return false;
+        }
+
+        /* Paste */
+        if ((e.ctrlKey || e.metaKey) && key === "v") {
+            e.preventDefault();
+            return false;
+        }
+
+        /* Select All */
+        if ((e.ctrlKey || e.metaKey) && key === "a") {
+            e.preventDefault();
+            return false;
+        }
+
+        /* Save Page */
+        if ((e.ctrlKey || e.metaKey) && key === "s") {
+            e.preventDefault();
+            return false;
+        }
+
+        /* View Source */
+        if ((e.ctrlKey || e.metaKey) && key === "u") {
+            e.preventDefault();
+            return false;
+        }
+
+    });
+
+
+    /* =====================================================
+       COMMON DEVTOOLS SHORTCUTS
+       These are global because F12 / DevTools shortcuts
+       don't require focus inside the gallery.
+    ===================================================== */
+
+    document.addEventListener("keydown", function (e) {
+
+        const key = e.key.toLowerCase();
+
+
+        /* F12 */
+        if (e.key === "F12") {
+            e.preventDefault();
+            e.stopPropagation();
+            return false;
+        }
+
+
+        /* Ctrl + Shift + I */
+        if (
+            (e.ctrlKey || e.metaKey) &&
+            e.shiftKey &&
+            key === "i"
+        ) {
+            e.preventDefault();
+            e.stopPropagation();
+            return false;
+        }
+
+
+        /* Ctrl + Shift + J */
+        if (
+            (e.ctrlKey || e.metaKey) &&
+            e.shiftKey &&
+            key === "j"
+        ) {
+            e.preventDefault();
+            e.stopPropagation();
+            return false;
+        }
+
+
+        /* Ctrl + Shift + C */
+        if (
+            (e.ctrlKey || e.metaKey) &&
+            e.shiftKey &&
+            key === "c"
+        ) {
+            e.preventDefault();
+            e.stopPropagation();
+            return false;
+        }
+
+    }, true);
+
+});
+
+</script>
+
+ </body>
+ </html>

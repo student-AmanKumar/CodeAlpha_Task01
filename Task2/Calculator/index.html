@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="CodeAlpha Frontend Internship Task 2 - Professional Calculator"
+    >
+
+    <meta
+        name="theme-color"
+        content="#10120f"
+    >
+
+    <title>Calc — Smart Calculator | CodeAlpha Task 02</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="akcalc-app">
+
+        <!-- HEADER -->
+        <header class="akcalc-header">
+
+            <a
+                href="#"
+                class="akcalc-brand"
+                aria-label="Calculator home"
+            >
+                <span class="akcalc-brand-mark">
+                    C
+                </span>
+
+                <span class="akcalc-brand-copy">
+                    <strong>CALC</strong>
+                    <small>Smart Calculator</small>
+                </span>
+            </a>
+
+            <div class="akcalc-header-meta">
+                <span class="akcalc-status-dot"></span>
+                <span>Interactive Calculator</span>
+            </div>
+
+        </header>
+
+
+        <!-- MAIN -->
+        <main class="akcalc-main">
+
+            <!-- INTRO -->
+            <section class="akcalc-intro">
+
+                <p class="akcalc-kicker">
+                    CODEALPHA · FRONTEND INTERNSHIP · TASK 02
+                </p>
+
+                <h1>
+                    Calculate
+                    <span>with</span>
+                    <em>clarity.</em>
+                </h1>
+
+                <p class="akcalc-intro-text">
+                    A responsive calculator built with HTML, CSS
+                    and vanilla JavaScript with real-time input,
+                    keyboard support and a refined interface.
+                </p>
+
+            </section>
+
+
+            <!-- CALCULATOR WORKSPACE -->
+            <section class="akcalc-workspace">
+
+                <!-- CALCULATOR -->
+                <div class="akcalc-calculator">
+
+                    <!-- DISPLAY -->
+                    <div class="akcalc-display">
+
+                        <div
+                            class="akcalc-expression"
+                            id="akcalcExpression"
+                        >
+                            0
+                        </div>
+
+                        <div class="akcalc-result-line">
+
+                            <button
+                                type="button"
+                                class="akcalc-copy"
+                                id="akcalcCopy"
+                                aria-label="Copy result"
+                                title="Copy result"
+                            >
+                                ⧉
+                            </button>
+
+                            <div
+                                class="akcalc-result"
+                                id="akcalcResult"
+                            >
+                                0
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- KEYPAD -->
+                    <div
+                        class="akcalc-keypad"
+                        id="akcalcKeypad"
+                    >
+
+                        <!-- ROW 1 -->
+                        <button
+                            type="button"
+                            class="akcalc-key akcalc-function"
+                            data-action="clear"
+                        >
+                            AC
+                        </button>
+
+                        <button
+                            type="button"
+                            class="akcalc-key akcalc-function"
+                            data-action="backspace"
+                            aria-label="Backspace"
+                        >
+                            ⌫
+                        </button>
+
+                        <button
+                            type="button"
+                            class="akcalc-key akcalc-function"
+                            data-action="percent"
+                        >
+                            %
+                        </button>
+
+                        <button
+                            type="button"
+                            class="akcalc-key akcalc-operator"
+                            data-value="/"
+                            aria-label="Divide"
+                        >
+                            ÷
+                        </button>
+
+
+                        <!-- ROW 2 -->
+                        <button
+                            type="button"
+                            class="akcalc-key"
+                            data-value="7"
+                        >
+                            7
+                        </button>
+
+                        <button
+                            type="button"
+                            class="akcalc-key"
+                            data-value="8"
+                        >
+                            8
+                        </button>
+
+                        <button
+                            type="button"
+                            class="akcalc-key"
+                            data-value="9"
+                        >
+                            9
+                        </button>
+
+                        <button
+                            type="button"
+                            class="akcalc-key akcalc-operator"
+                            data-value="*"
+                            aria-label="Multiply"
+                        >
+                            ×
+                        </button>
+
+
+                        <!-- ROW 3 -->
+                        <button
+                            type="button"
+                            class="akcalc-key"
+                            data-value="4"
+                        >
+                            4
+                        </button>
+
+                        <button
+                            type="button"
+                            class="akcalc-key"
+                            data-value="5"
+                        >
+                            5
+                        </button>
+
+                        <button
+                            type="button"
+                            class="akcalc-key"
+                            data-value="6"
+                        >
+                            6
+                        </button>
+
+                        <button
+                            type="button"
+                            class="akcalc-key akcalc-operator"
+                            data-value="-"
+                            aria-label="Subtract"
+                        >
+                            −
+                        </button>
+
+
+                        <!-- ROW 4 -->
+                        <button
+                            type="button"
+                            class="akcalc-key"
+                            data-value="1"
+                        >
+                            1
+                        </button>
+
+                        <button
+                            type="button"
+                            class="akcalc-key"
+                            data-value="2"
+                        >
+                            2
+                        </button>
+
+                        <button
+                            type="button"
+                            class="akcalc-key"
+                            data-value="3"
+                        >
+                            3
+                        </button>
+
+                        <button
+                            type="button"
+                            class="akcalc-key akcalc-operator"
+                            data-value="+"
+                            aria-label="Add"
+                        >
+                            +
+                        </button>
+
+
+                        <!-- ROW 5 -->
+                        <button
+                            type="button"
+                            class="akcalc-key"
+                            data-value="0"
+                        >
+                            0
+                        </button>
+
+                        <button
+                            type="button"
+                            class="akcalc-key"
+                            data-value="."
+                        >
+                            .
+                        </button>
+
+                        <button
+                            type="button"
+                            class="akcalc-key akcalc-sign"
+                            data-action="sign"
+                            aria-label="Change sign"
+                        >
+                            +/−
+                        </button>
+
+                        <button
+                            type="button"
+                            class="akcalc-key akcalc-equals"
+                            data-action="equals"
+                        >
+                            =
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- HISTORY -->
+                <aside class="akcalc-history">
+
+                    <div class="akcalc-history-head">
+
+                        <div>
+                            <p>CALCULATION LOG</p>
+                            <h2>History</h2>
+                        </div>
+
+                        <button
+                            type="button"
+                            class="akcalc-clear-history"
+                            id="akcalcClearHistory"
+                        >
+                            Clear
+                        </button>
+
+                    </div>
+
+
+                    <div
+                        class="akcalc-history-list"
+                        id="akcalcHistoryList"
+                    >
+
+                        <div class="akcalc-history-empty">
+
+                            <span>∅</span>
+
+                            <p>
+                                Calculations will<br>
+                                appear here.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </aside>
+
+            </section>
+
+
+            <!-- KEYBOARD SHORTCUTS -->
+            <section class="akcalc-shortcuts">
+
+                <span>
+                    Keyboard supported
+                </span>
+
+                <div>
+
+                    <kbd>0–9</kbd>
+                    <kbd>+</kbd>
+                    <kbd>−</kbd>
+                    <kbd>×</kbd>
+                    <kbd>÷</kbd>
+                    <kbd>%</kbd>
+                    <kbd>Enter</kbd>
+                    <kbd>Backspace</kbd>
+                    <kbd>Esc</kbd>
+
+                </div>
+
+            </section>
+
+        </main>
+
+
+        <!-- FOOTER -->
+        <footer class="akcalc-footer">
+
+            <span>
+                CodeAlpha Frontend Internship
+            </span>
+
+            <span>
+                Task 02 · Calculator
+            </span>
+
+            <span>
+                2026
+            </span>
+
+        </footer>
+
+
+        <!-- TOAST -->
+        <div
+            class="akcalc-toast"
+            id="akcalcToast"
+            aria-live="polite"
+        >
+            Result copied
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
