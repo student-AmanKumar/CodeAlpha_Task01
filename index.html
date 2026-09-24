@@ -1,44 +1,1967 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>CodeAlpha Frontend Internship</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 80px 20px;
-        }
+<title>CodeAlpha — Internship Tasks</title>
 
-        a {
-            display: inline-block;
-            margin: 15px;
-            padding: 14px 25px;
-            text-decoration: none;
-            border: 1px solid #222;
-            color: #222;
-            border-radius: 8px;
-        }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-        a:hover {
-            background: #222;
-            color: #fff;
-        }
-    </style>
+<link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+>
+
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+>
+
+<style>
+
+/* =========================================================
+   ROOT
+========================================================= */
+
+:root{
+
+    --cream:#F7F0E4;
+    --cream-light:#FCF9F3;
+    --cream-deep:#EDE2D2;
+
+    --olive:#29372D;
+    --olive-soft:#485247;
+
+    --coffee:#76523C;
+    --coffee-light:#A77C5D;
+
+    --terracotta:#B96F48;
+    --gold:#C6A15B;
+
+    --text:#6F7068;
+    --muted:#9A968B;
+
+    --line:#E1D6C6;
+
+    --white:#FFFDF9;
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+    scrollbar-width:none;
+}
+
+html::-webkit-scrollbar{
+    display:none;
+}
+
+body{
+    min-height:100vh;
+
+    overflow-x:hidden;
+
+    scrollbar-width:none;
+
+    background:var(--cream);
+
+    color:var(--olive);
+
+    font-family:"DM Sans",sans-serif;
+}
+
+body::-webkit-scrollbar{
+    display:none;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+button{
+    font:inherit;
+}
+
+
+/* =========================================================
+   LOADER
+========================================================= */
+
+.ca-loader{
+    position:fixed;
+    inset:0;
+
+    z-index:99999;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:var(--cream);
+
+    transition:
+        opacity .7s ease,
+        visibility .7s ease;
+}
+
+.ca-loader.hide{
+    opacity:0;
+    visibility:hidden;
+    pointer-events:none;
+}
+
+.ca-loader-inner{
+    text-align:center;
+}
+
+.ca-loader-logo{
+    width:120px;
+
+    display:block;
+
+    margin:0 auto 24px;
+
+    object-fit:contain;
+
+    animation:
+        caLogoIn .8s ease both,
+        caLogoFloat 2.5s 1s ease-in-out infinite;
+}
+
+.ca-loader-title{
+    color:var(--olive);
+
+    font-family:"Space Grotesk",sans-serif;
+
+    font-size:clamp(22px,4vw,37px);
+
+    line-height:1;
+
+    font-weight:700;
+
+    letter-spacing:.12em;
+
+    animation:caTextIn .8s .12s ease both;
+}
+
+.ca-loader-sub{
+    margin-top:9px;
+
+    color:var(--coffee);
+
+    font-size:10px;
+
+    font-weight:700;
+
+    letter-spacing:.2em;
+
+    text-transform:uppercase;
+
+    animation:caTextIn .8s .23s ease both;
+}
+
+.ca-loader-bar{
+    width:65px;
+    height:3px;
+
+    margin:18px auto 0;
+
+    border-radius:20px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--coffee),
+            var(--terracotta),
+            var(--gold)
+        );
+
+    animation:caBarIn .8s .34s ease both;
+}
+
+@keyframes caLogoIn{
+
+    from{
+        opacity:0;
+        transform:translateY(-18px) scale(.9);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0) scale(1);
+    }
+
+}
+
+@keyframes caLogoFloat{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-5px);
+    }
+
+}
+
+@keyframes caTextIn{
+
+    from{
+        opacity:0;
+        transform:translateY(12px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+@keyframes caBarIn{
+
+    from{
+        width:0;
+        opacity:0;
+    }
+
+    to{
+        width:65px;
+        opacity:1;
+    }
+
+}
+
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.ca-page{
+    min-height:100vh;
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+
+        radial-gradient(
+            circle at 88% 8%,
+            rgba(118,82,60,.10),
+            transparent 23%
+        ),
+
+        radial-gradient(
+            circle at 5% 92%,
+            rgba(198,161,91,.12),
+            transparent 25%
+        ),
+
+        var(--cream);
+}
+
+
+/* =========================================================
+   TOP ACCENT
+========================================================= */
+
+.ca-top-line{
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:4px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--olive) 0 62%,
+            var(--coffee) 62% 78%,
+            var(--terracotta) 78% 91%,
+            var(--gold) 91% 100%
+        );
+}
+
+
+/* =========================================================
+   DECORATIVE COFFEE SHAPE
+========================================================= */
+
+.ca-coffee-orbit{
+    position:absolute;
+
+    width:390px;
+    height:390px;
+
+    right:-235px;
+    top:50%;
+
+    transform:translateY(-50%);
+
+    border:1px solid rgba(118,82,60,.12);
+
+    border-radius:50%;
+
+    pointer-events:none;
+}
+
+.ca-coffee-orbit::before{
+    content:"";
+
+    position:absolute;
+
+    inset:35px;
+
+    border:1px solid rgba(185,111,72,.10);
+
+    border-radius:50%;
+}
+
+.ca-coffee-orbit::after{
+    content:"";
+
+    position:absolute;
+
+    width:8px;
+    height:8px;
+
+    left:43px;
+    top:70px;
+
+    border-radius:50%;
+
+    background:var(--coffee-light);
+
+    opacity:.5;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.ca-header{
+    width:min(1160px,91%);
+
+    height:88px;
+
+    margin:auto;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:space-between;
+
+    position:relative;
+
+    z-index:20;
+}
+
+.ca-logo{
+    display:flex;
+    align-items:center;
+}
+
+.ca-logo img{
+    width:114px;
+
+    display:block;
+
+    object-fit:contain;
+}
+
+.ca-header-right{
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+}
+
+.ca-header-label{
+    color:var(--muted);
+
+    font-size:10px;
+
+    font-weight:700;
+
+    letter-spacing:.16em;
+
+    text-transform:uppercase;
+}
+
+.ca-repo{
+    width:42px;
+    height:42px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border:1px solid var(--line);
+
+    border-radius:50%;
+
+    background:rgba(255,253,249,.65);
+
+    color:var(--coffee);
+
+    transition:.25s ease;
+}
+
+.ca-repo:hover{
+    background:var(--coffee);
+
+    color:var(--cream-light);
+
+    border-color:var(--coffee);
+
+    transform:translateY(-2px);
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.ca-main{
+    width:min(1160px,91%);
+
+    min-height:calc(100vh - 88px);
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:43% 57%;
+
+    align-items:center;
+
+    padding:15px 0 65px;
+
+    position:relative;
+
+    z-index:5;
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.ca-intro{
+    padding-right:55px;
+}
+
+.ca-overline{
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin-bottom:20px;
+
+    color:var(--coffee);
+
+    font-size:10px;
+
+    font-weight:800;
+
+    letter-spacing:.19em;
+
+    text-transform:uppercase;
+}
+
+.ca-overline::before{
+    content:"";
+
+    width:27px;
+    height:2px;
+
+    background:var(--terracotta);
+}
+
+.ca-heading{
+    color:var(--olive);
+
+    font-family:"Space Grotesk",sans-serif;
+
+    font-size:clamp(50px,6vw,78px);
+
+    line-height:.91;
+
+    letter-spacing:-.065em;
+
+    font-weight:700;
+}
+
+.ca-heading span{
+    color:var(--coffee);
+}
+
+.ca-my-line{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    min-height:78px;
+}
+
+.ca-my-image{
+    display:block;
+    width:auto;
+    height:72px;
+    max-width:100px;
+    object-fit:contain;
+    object-position:center bottom;
+    filter:drop-shadow(0 7px 12px rgba(41,55,45,.10));
+    transition:transform .3s ease, filter .3s ease;
+}
+
+.ca-my-image:hover{
+    transform:translateY(-3px);
+    filter:drop-shadow(0 10px 15px rgba(41,55,45,.14));
+}
+
+.ca-intro-text{
+    max-width:410px;
+
+    margin-top:26px;
+
+    color:var(--text);
+
+    font-size:14px;
+
+    line-height:1.8;
+}
+
+.ca-stats{
+    display:flex;
+
+    align-items:center;
+
+    margin-top:31px;
+}
+
+.ca-stat{
+    padding-right:18px;
+}
+
+.ca-stat + .ca-stat{
+    padding-left:18px;
+
+    border-left:1px solid var(--line);
+}
+
+.ca-stat strong{
+    display:block;
+
+    color:var(--olive);
+
+    font-family:"Space Grotesk",sans-serif;
+
+    font-size:19px;
+
+    line-height:1;
+}
+
+.ca-stat span{
+    display:block;
+
+    margin-top:5px;
+
+    color:var(--muted);
+
+    font-size:9px;
+
+    font-weight:700;
+
+    letter-spacing:.1em;
+
+    text-transform:uppercase;
+}
+
+
+/* =========================================================
+   PROJECT AREA
+========================================================= */
+
+.ca-project-area{
+    position:relative;
+
+    min-height:500px;
+
+    display:flex;
+
+    align-items:center;
+
+    padding-left:35px;
+}
+
+
+/* =========================================================
+   GIANT NUMBER
+========================================================= */
+
+.ca-giant-number{
+    position:absolute;
+
+    top:-25px;
+    right:-5px;
+
+    color:#E9DECE;
+
+    font-family:"Space Grotesk",sans-serif;
+
+    font-size:clamp(150px,19vw,245px);
+
+    line-height:1;
+
+    letter-spacing:-.09em;
+
+    user-select:none;
+
+    pointer-events:none;
+
+    z-index:0;
+}
+
+
+/* =========================================================
+   PROJECT
+========================================================= */
+
+.ca-project{
+    position:relative;
+
+    z-index:2;
+
+    width:100%;
+
+    padding-top:12px;
+}
+
+.ca-project-meta{
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin-bottom:14px;
+}
+
+.ca-project-dot{
+    width:7px;
+    height:7px;
+
+    border-radius:50%;
+
+    background:var(--terracotta);
+
+    box-shadow:
+        0 0 0 5px rgba(185,111,72,.10);
+}
+
+.ca-project-meta span{
+    color:var(--coffee);
+
+    font-size:10px;
+
+    font-weight:800;
+
+    letter-spacing:.18em;
+
+    text-transform:uppercase;
+}
+
+.ca-project-title{
+    color:var(--olive);
+
+    font-family:"Space Grotesk",sans-serif;
+
+    font-size:clamp(43px,5.2vw,68px);
+
+    line-height:.98;
+
+    letter-spacing:-.055em;
+
+    transition:
+        opacity .22s ease,
+        transform .22s ease;
+}
+
+.ca-project-desc{
+    max-width:555px;
+
+    margin-top:19px;
+
+    color:var(--text);
+
+    font-size:14px;
+
+    line-height:1.75;
+
+    transition:
+        opacity .22s ease,
+        transform .22s ease;
+}
+
+
+/* =========================================================
+   FEATURE
+========================================================= */
+
+.ca-feature-line{
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin-top:22px;
+}
+
+.ca-feature-line i{
+    color:var(--gold);
+
+    font-size:7px;
+}
+
+.ca-feature-line span{
+    color:#77766F;
+
+    font-size:11px;
+
+    font-weight:600;
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.ca-actions{
+    display:flex;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    margin-top:28px;
+}
+
+.ca-btn{
+    height:45px;
+
+    display:inline-flex;
+
+    align-items:center;
+    justify-content:center;
+
+    gap:9px;
+
+    padding:0 18px;
+
+    border-radius:7px;
+
+    font-size:11px;
+
+    font-weight:800;
+
+    transition:.25s ease;
+}
+
+.ca-btn-primary{
+    background:var(--coffee);
+
+    color:var(--cream-light);
+
+    border:1px solid var(--coffee);
+}
+
+.ca-btn-primary:hover{
+    background:var(--olive);
+
+    border-color:var(--olive);
+
+    transform:translateY(-3px);
+}
+
+.ca-btn-secondary{
+    background:rgba(255,253,249,.72);
+
+    color:var(--coffee);
+
+    border:1px solid var(--line);
+}
+
+.ca-btn-secondary:hover{
+    background:var(--cream-light);
+
+    color:var(--terracotta);
+
+    border-color:var(--terracotta);
+
+    transform:translateY(-3px);
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.ca-navigation{
+    display:flex;
+
+    align-items:center;
+
+    gap:9px;
+
+    margin-top:39px;
+
+    padding-top:18px;
+
+    border-top:1px solid var(--line);
+}
+
+.ca-nav-btn{
+    width:39px;
+    height:35px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    border:1px solid var(--line);
+
+    border-radius:6px;
+
+    background:rgba(255,253,249,.68);
+
+    color:var(--coffee);
+
+    cursor:pointer;
+
+    transition:.25s ease;
+}
+
+.ca-nav-btn:hover{
+    background:var(--coffee);
+
+    color:var(--cream-light);
+
+    border-color:var(--coffee);
+}
+
+.ca-progress{
+    display:flex;
+
+    align-items:center;
+
+    gap:7px;
+
+    margin-left:7px;
+}
+
+.ca-progress-line{
+    width:50px;
+    height:2px;
+
+    background:var(--line);
+
+    position:relative;
+}
+
+.ca-progress-fill{
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:50%;
+    height:100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--coffee),
+            var(--terracotta)
+        );
+
+    transition:.3s ease;
+}
+
+.ca-progress-text{
+    color:var(--muted);
+
+    font-size:10px;
+
+    font-weight:800;
+
+    letter-spacing:.08em;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.ca-footer{
+    position:absolute;
+
+    left:50%;
+    bottom:19px;
+
+    transform:translateX(-50%);
+
+    color:#A29B8F;
+
+    font-size:9px;
+
+    font-weight:700;
+
+    letter-spacing:.13em;
+
+    text-transform:uppercase;
+
+    white-space:nowrap;
+
+    z-index:10;
+}
+
+
+/* =========================================================
+   SWITCH ANIMATION
+========================================================= */
+
+.ca-project.switching .ca-project-title,
+.ca-project.switching .ca-project-desc,
+.ca-project.switching .ca-feature-line{
+
+    opacity:0;
+
+    transform:translateY(9px);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media(max-width:900px){
+
+    .ca-main{
+        grid-template-columns:1fr;
+
+        min-height:auto;
+
+        padding-top:55px;
+
+        padding-bottom:90px;
+    }
+
+    .ca-intro{
+        padding-right:0;
+
+        margin-bottom:60px;
+    }
+
+    .ca-intro-text{
+        max-width:570px;
+    }
+
+    .ca-project-area{
+        min-height:470px;
+
+        padding-left:0;
+    }
+
+    .ca-giant-number{
+        right:0;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:600px){
+
+    .ca-header{
+        width:90%;
+
+        height:72px;
+    }
+
+    .ca-logo img{
+        width:96px;
+    }
+
+    .ca-header-label{
+        display:none;
+    }
+
+    .ca-repo{
+        width:38px;
+        height:38px;
+    }
+
+    .ca-main{
+        width:90%;
+
+        padding-top:36px;
+
+        padding-bottom:75px;
+    }
+
+    .ca-intro{
+        margin-bottom:45px;
+    }
+
+    .ca-heading{
+        font-size:clamp(45px,13vw,64px);
+    }
+
+    .ca-my-line{
+        gap:11px;
+        min-height:60px;
+    }
+
+    .ca-my-image{
+        height:58px;
+        max-width:80px;
+    }
+
+    .ca-intro-text{
+        margin-top:21px;
+
+        font-size:13px;
+
+        line-height:1.7;
+    }
+
+    .ca-stats{
+        margin-top:25px;
+    }
+
+    .ca-stat strong{
+        font-size:17px;
+    }
+
+    .ca-stat span{
+        font-size:8px;
+    }
+
+    .ca-project-area{
+        min-height:420px;
+    }
+
+    .ca-giant-number{
+        top:-12px;
+
+        right:-4px;
+
+        font-size:145px;
+    }
+
+    .ca-project{
+        padding-top:8px;
+    }
+
+    .ca-project-title{
+        font-size:43px;
+    }
+
+    .ca-project-desc{
+        margin-top:16px;
+
+        font-size:13px;
+
+        line-height:1.7;
+    }
+
+    .ca-feature-line{
+        margin-top:18px;
+    }
+
+    .ca-feature-line span{
+        font-size:10px;
+    }
+
+    .ca-actions{
+        margin-top:24px;
+    }
+
+    .ca-btn{
+        height:42px;
+
+        padding:0 13px;
+
+        font-size:10px;
+    }
+
+    .ca-navigation{
+        margin-top:29px;
+    }
+
+    .ca-footer{
+        bottom:10px;
+
+        font-size:7px;
+
+        letter-spacing:.09em;
+    }
+
+    .ca-loader-logo{
+        width:96px;
+    }
+
+    .ca-loader-title{
+        font-size:20px;
+    }
+
+    .ca-loader-sub{
+        font-size:8px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media(max-width:370px){
+
+    .ca-heading{
+        font-size:42px;
+    }
+
+    .ca-project-title{
+        font-size:38px;
+    }
+
+    .ca-project-area{
+        min-height:400px;
+    }
+
+    .ca-btn{
+        padding:0 11px;
+    }
+
+}
+
+</style>
+
 </head>
+
 
 <body>
 
-    <h1>CodeAlpha Frontend Internship</h1>
 
-    <p>Select a task</p>
+<!-- =========================================================
+     LOADER
+========================================================= -->
 
-    <a href="./Task1/">TASK 01 — Image Gallery</a>
+<div class="ca-loader" id="caLoader">
 
-    <a href="./Task2/">TASK 02 — Portfolio</a>
+    <div class="ca-loader-inner">
+
+        <img
+            src="./Task1/gallery imgs/codealphalogo.png"
+            alt="CodeAlpha"
+            class="ca-loader-logo"
+        >
+
+        <div class="ca-loader-title">
+            INTERNSHIP TASKS
+        </div>
+
+        <div class="ca-loader-sub">
+            CodeAlpha Internship
+        </div>
+
+        <div class="ca-loader-bar"></div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     PAGE
+========================================================= -->
+
+<main class="ca-page">
+
+    <div class="ca-top-line"></div>
+
+    <div class="ca-coffee-orbit"></div>
+
+
+    <!-- =====================================================
+         HEADER
+    ===================================================== -->
+
+    <header class="ca-header">
+
+        <a
+            href="https://www.codealpha.tech/"
+            target="_blank"
+            rel="noopener"
+            class="ca-logo"
+        >
+
+            <img
+                src="./Task1/gallery imgs/codealphalogo.png"
+                alt="CodeAlpha"
+            >
+
+        </a>
+
+
+        <div class="ca-header-right">
+
+            <span class="ca-header-label">
+                Internship Showcase
+            </span>
+
+            <a
+                href="https://github.com/student-AmanKumar/CodeAlpha_Task01"
+                target="_blank"
+                rel="noopener"
+                class="ca-repo"
+                aria-label="GitHub Repository"
+            >
+
+                <i class="fa-brands fa-github"></i>
+
+            </a>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         MAIN
+    ===================================================== -->
+
+    <section class="ca-main">
+
+
+        <!-- =================================================
+             INTRO
+        ================================================= -->
+
+        <div class="ca-intro">
+
+            <div class="ca-overline">
+                CodeAlpha Internship
+            </div>
+
+
+            <h1 class="ca-heading">
+
+                <span class="ca-my-line">
+                    <span>My</span>
+
+                    <img
+                        src="./Task1/gallery imgs/aman.png"
+                        alt="Aman Kumar"
+                        class="ca-my-image"
+                        draggable="false"
+                    >
+                </span>
+
+                <span>Internship</span><br>
+
+                Tasks.
+
+            </h1>
+
+
+            <p class="ca-intro-text">
+
+                A focused showcase of two projects completed
+                during my CodeAlpha internship — created with
+                attention to interaction, responsiveness and
+                user experience.
+
+            </p>
+
+
+            <div class="ca-stats">
+
+                <div class="ca-stat">
+
+                    <strong>02</strong>
+
+                    <span>
+                        Projects
+                    </span>
+
+                </div>
+
+
+                <div class="ca-stat">
+
+                    <strong>2026</strong>
+
+                    <span>
+                        Internship
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             PROJECT SHOWCASE
+        ================================================= -->
+
+        <div class="ca-project-area">
+
+
+            <div
+                class="ca-giant-number"
+                id="caNumber"
+            >
+                01
+            </div>
+
+
+            <div
+                class="ca-project"
+                id="caProject"
+            >
+
+
+                <div class="ca-project-meta">
+
+                    <div class="ca-project-dot"></div>
+
+                    <span id="caTaskLabel">
+                        Task 01
+                    </span>
+
+                </div>
+
+
+                <h2
+                    class="ca-project-title"
+                    id="caTitle"
+                >
+                    Image Gallery
+                </h2>
+
+
+                <p
+                    class="ca-project-desc"
+                    id="caDescription"
+                >
+                    A responsive image gallery created with
+                    smooth navigation, interactive viewing,
+                    hover effects and a focused visual experience.
+                </p>
+
+
+                <div
+                    class="ca-feature-line"
+                    id="caFeature"
+                >
+
+                    <i class="fa-solid fa-circle"></i>
+
+                    <span>
+                        Interactive viewing experience
+                    </span>
+
+                </div>
+
+
+                <div class="ca-actions">
+
+                    <a
+                        href="./Task1/"
+                        id="caLive"
+                        class="ca-btn ca-btn-primary"
+                    >
+
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                        Open Project
+
+                    </a>
+
+
+                    <a
+                        href="https://github.com/student-AmanKumar/CodeAlpha_Task01/tree/main/Task1"
+                        id="caGithub"
+                        target="_blank"
+                        rel="noopener"
+                        class="ca-btn ca-btn-secondary"
+                    >
+
+                        <i class="fa-brands fa-github"></i>
+
+                        GitHub
+
+                    </a>
+
+                </div>
+
+
+                <!-- =================================================
+                     NAVIGATION
+                ================================================= -->
+
+                <div class="ca-navigation">
+
+                    <button
+                        class="ca-nav-btn"
+                        id="caPrev"
+                        aria-label="Previous Task"
+                    >
+
+                        <i class="fa-solid fa-arrow-left"></i>
+
+                    </button>
+
+
+                    <button
+                        class="ca-nav-btn"
+                        id="caNext"
+                        aria-label="Next Task"
+                    >
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+
+                    <div class="ca-progress">
+
+                        <div class="ca-progress-line">
+
+                            <div
+                                class="ca-progress-fill"
+                                id="caProgressFill"
+                            ></div>
+
+                        </div>
+
+                        <span
+                            class="ca-progress-text"
+                            id="caProgressText"
+                        >
+                            01 / 02
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         FOOTER
+    ===================================================== -->
+
+    <div class="ca-footer">
+        CodeAlpha • Internship Tasks • 2026
+    </div>
+
+</main>
+
+
+
+<script>
+
+/* =========================================================
+   LOADER
+========================================================= */
+
+window.addEventListener("load",function(){
+
+    setTimeout(function(){
+
+        document
+            .getElementById("caLoader")
+            .classList.add("hide");
+
+    },1500);
+
+});
+
+
+/* =========================================================
+   TASK DATA
+========================================================= */
+
+const tasks = [
+
+    {
+        number:"01",
+
+        label:"Task 01",
+
+        title:"Image Gallery",
+
+        description:
+            "A responsive image gallery created with smooth navigation, interactive viewing, hover effects and a focused visual experience.",
+
+        feature:
+            "Interactive viewing experience",
+
+        live:"./Task1/",
+
+        github:
+            "https://github.com/student-AmanKumar/CodeAlpha_Task01/tree/main/Task1"
+    },
+
+
+    {
+        number:"02",
+
+        label:"Task 02",
+
+        title:"Portfolio",
+
+        description:
+            "A clean and responsive personal portfolio created to present projects, skills, experience and professional information through a focused digital experience.",
+
+        feature:
+            "Responsive personal portfolio",
+
+        live:"./Task2",
+
+        github:
+            "https://github.com/student-AmanKumar/CodeAlpha_Task01/tree/main/Task2"
+    }
+
+];
+
+
+/* =========================================================
+   ELEMENTS
+========================================================= */
+
+const project =
+    document.getElementById("caProject");
+
+const number =
+    document.getElementById("caNumber");
+
+const taskLabel =
+    document.getElementById("caTaskLabel");
+
+const title =
+    document.getElementById("caTitle");
+
+const description =
+    document.getElementById("caDescription");
+
+const feature =
+    document.getElementById("caFeature");
+
+const live =
+    document.getElementById("caLive");
+
+const github =
+    document.getElementById("caGithub");
+
+const progressFill =
+    document.getElementById("caProgressFill");
+
+const progressText =
+    document.getElementById("caProgressText");
+
+
+let currentTask = 0;
+
+
+/* =========================================================
+   RENDER TASK
+========================================================= */
+
+function renderTask(index){
+
+    project.classList.add("switching");
+
+
+    setTimeout(function(){
+
+        const task = tasks[index];
+
+
+        number.textContent =
+            task.number;
+
+
+        taskLabel.textContent =
+            task.label;
+
+
+        title.textContent =
+            task.title;
+
+
+        description.textContent =
+            task.description;
+
+
+        feature.innerHTML = `
+            <i class="fa-solid fa-circle"></i>
+            <span>${task.feature}</span>
+        `;
+
+
+        live.href =
+            task.live;
+
+
+        github.href =
+            task.github;
+
+
+        progressText.textContent =
+            task.number + " / 02";
+
+
+        progressFill.style.width =
+            index === 0 ? "50%" : "100%";
+
+
+        project.classList.remove("switching");
+
+    },180);
+
+}
+
+
+/* =========================================================
+   NEXT
+========================================================= */
+
+document
+    .getElementById("caNext")
+    .addEventListener("click",function(){
+
+        currentTask++;
+
+        if(currentTask >= tasks.length){
+            currentTask = 0;
+        }
+
+        renderTask(currentTask);
+
+    });
+
+
+/* =========================================================
+   PREVIOUS
+========================================================= */
+
+document
+    .getElementById("caPrev")
+    .addEventListener("click",function(){
+
+        currentTask--;
+
+        if(currentTask < 0){
+            currentTask = tasks.length - 1;
+        }
+
+        renderTask(currentTask);
+
+    });
+
+
+/* =========================================================
+   KEYBOARD
+========================================================= */
+
+document.addEventListener("keydown",function(e){
+
+    if(e.key === "ArrowRight"){
+        document.getElementById("caNext").click();
+    }
+
+    if(e.key === "ArrowLeft"){
+        document.getElementById("caPrev").click();
+    }
+
+});
+
+</script>
+<!-- =========================================================
+     PAGE PROTECTION
+========================================================= -->
+
+<script>
+
+(function(){
+
+    /* -----------------------------------------
+       DISABLE RIGHT CLICK
+    ----------------------------------------- */
+
+    document.addEventListener("contextmenu", function(e){
+
+        e.preventDefault();
+
+    });
+
+
+    /* -----------------------------------------
+       DISABLE TEXT SELECTION
+    ----------------------------------------- */
+
+    document.addEventListener("selectstart", function(e){
+
+        e.preventDefault();
+
+    });
+
+
+    /* -----------------------------------------
+       DISABLE COPY / CUT
+    ----------------------------------------- */
+
+    document.addEventListener("copy", function(e){
+
+        e.preventDefault();
+
+    });
+
+
+    document.addEventListener("cut", function(e){
+
+        e.preventDefault();
+
+    });
+
+
+    /* -----------------------------------------
+       DISABLE DRAGGING
+    ----------------------------------------- */
+
+    document.addEventListener("dragstart", function(e){
+
+        e.preventDefault();
+
+    });
+
+
+    /* -----------------------------------------
+       KEYBOARD PROTECTION
+    ----------------------------------------- */
+
+    document.addEventListener("keydown", function(e){
+
+        const key = e.key.toLowerCase();
+
+        /* F12 */
+
+        if(e.key === "F12"){
+
+            e.preventDefault();
+
+            return false;
+
+        }
+
+
+        /* CTRL + U */
+
+        if(
+            e.ctrlKey &&
+            key === "u"
+        ){
+
+            e.preventDefault();
+
+            return false;
+
+        }
+
+
+        /* CTRL + S */
+
+        if(
+            e.ctrlKey &&
+            key === "s"
+        ){
+
+            e.preventDefault();
+
+            return false;
+
+        }
+
+
+        /* CTRL + C */
+
+        if(
+            e.ctrlKey &&
+            key === "c"
+        ){
+
+            e.preventDefault();
+
+            return false;
+
+        }
+
+
+        /* CTRL + X */
+
+        if(
+            e.ctrlKey &&
+            key === "x"
+        ){
+
+            e.preventDefault();
+
+            return false;
+
+        }
+
+
+        /* CTRL + A */
+
+        if(
+            e.ctrlKey &&
+            key === "a"
+        ){
+
+            e.preventDefault();
+
+            return false;
+
+        }
+
+
+        /* CTRL + SHIFT + I */
+
+        if(
+            e.ctrlKey &&
+            e.shiftKey &&
+            key === "i"
+        ){
+
+            e.preventDefault();
+
+            return false;
+
+        }
+
+
+        /* CTRL + SHIFT + J */
+
+        if(
+            e.ctrlKey &&
+            e.shiftKey &&
+            key === "j"
+        ){
+
+            e.preventDefault();
+
+            return false;
+
+        }
+
+
+        /* CTRL + SHIFT + C */
+
+        if(
+            e.ctrlKey &&
+            e.shiftKey &&
+            key === "c"
+        ){
+
+            e.preventDefault();
+
+            return false;
+
+        }
+
+    });
+
+
+    /* -----------------------------------------
+       PREVENT IMAGE DRAG
+    ----------------------------------------- */
+
+    document.querySelectorAll("img").forEach(function(img){
+
+        img.setAttribute("draggable","false");
+
+        img.addEventListener("dragstart",function(e){
+
+            e.preventDefault();
+
+        });
+
+    });
+
+
+    /* -----------------------------------------
+       DISABLE PRINT
+    ----------------------------------------- */
+
+    window.addEventListener("beforeprint",function(){
+
+        document.body.style.display = "none";
+
+    });
+
+    window.addEventListener("afterprint",function(){
+
+        document.body.style.display = "";
+
+    });
+
+
+})();
+
+</script>
 
 </body>
 </html>
